@@ -1,0 +1,14 @@
+# 虚拟环境
+venv/
+env/
+.env
+
+
+# api_key
+my_api_key.txt
+*api_key*
+
+# mac 自带的文件属性说明
+.DS_Store
+.DS_Store*
+**/.DS_Store

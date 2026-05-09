@@ -12,3 +12,7 @@ my_api_key.txt
 .DS_Store
 .DS_Store*
 **/.DS_Store
+
+
+.claude
+.claude*

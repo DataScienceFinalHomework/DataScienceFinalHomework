@@ -8,7 +8,7 @@ Prototype:
     async def call_llm(prompt_system, prompt_user, session, RETRY_DELAY = 2, RETRY_ATTEMPTS = 3, timeout = 20, model_used = "deepseek-ai/DeepSeek-V3"):
 Parameters:
     prompt_system: a string, the prompt needed to be post to LLM
-        example: You are a expert in Computer Science
+        example: You are a expert in Data Science
     prompt_user: a string, the prompt needed to be post to LLM
         example: explain what is data science in Chinese
     session: ...
@@ -20,6 +20,9 @@ Return:
     a tuple of (explanation, input_tokens, output_tokens)
     explanation: The result of LLM return
 
+ATTENTIONS:
+ api_key_file 需要和当前文件放在同一个目录下面
+
 """
 
 
@@ -27,8 +30,12 @@ import logging
 from datetime import datetime
 import asyncio
 import random
+import os
+import aiohttp
 
-API_FILE = "my_api_key.txt" # the file storing the api key
+# 使用脚本所在目录的绝对路径
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+API_FILE = os.path.join(SCRIPT_DIR, "my_api_key.txt")
 
 def setup_logging():
     log_filename = f"Call_llm_file_logging_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
@@ -53,19 +60,21 @@ def ReadInAPI():
     """
     api_key = None
     try:
-        with open(API_FILE, "r") as f:
-            api_key = f.read()
+        with open(API_FILE, "r", encoding='utf-8') as f:
+            content = f.read()
+            # 移除所有空白字符（包括换行符、回车符、空格、制表符、BOM等）
+            api_key = ''.join(content.split())
     except FileNotFoundError:
         logger.error(f"错误：找不到文件{API_FILE}，请检查路径是否正确。")
     return api_key
 
 
-async def call_llm(prompt_system, prompt_user, session, RETRY_DELAY = 2, RETRY_ATTEMPTS = 3, timeout = 20, model_used = "deepseek-ai/DeepSeek-V3"):
+async def call_llm(prompt_system, prompt_user, session, RETRY_DELAY = 2, RETRY_ATTEMPTS = 3, timeout = 60, model_used = "deepseek-ai/DeepSeek-V3"):
     """
     Call LLM API
     Parameters:
         prompt_system: a string, the prompt needed to be post to LLM
-            example: You are a expert in Computer Science
+            example: You are a expert in Data Science
         prompt_user: a string, the prompt needed to be post to LLM
             example: explain what is data science in Chinese
         session: ...
@@ -79,7 +88,16 @@ async def call_llm(prompt_system, prompt_user, session, RETRY_DELAY = 2, RETRY_A
     """
 
     BASE_URL = "https://api.siliconflow.cn/v1/chat/completions"
+
+    # 清理换行
+    prompt_system = prompt_system.strip()
+    prompt_user = prompt_user.strip()
+
+
     my_api_key = ReadInAPI()
+    if my_api_key is None:
+        logger.error("没有读到api_key")
+        return None, 0, 0
     headers = {
         "Content-Type": "application/json",
         "Authorization": f"Bearer {my_api_key}"
@@ -102,7 +120,7 @@ async def call_llm(prompt_system, prompt_user, session, RETRY_DELAY = 2, RETRY_A
 
     for attempt in range(RETRY_ATTEMPTS):
         try:
-            async with session.post(BASE_URL, headers=headers, json=payload, timeout=timeout) as response:
+            async with session.post(BASE_URL, headers=headers, json=payload, timeout=aiohttp.ClientTimeout(total=timeout)) as response:
                 if response.status == 200:
                     result = await response.json() # .json()是个异步方法，必须await。
                     explanation = result["choices"][0]["message"]["content"]
@@ -120,7 +138,7 @@ async def call_llm(prompt_system, prompt_user, session, RETRY_DELAY = 2, RETRY_A
                     delay = RETRY_DELAY * (2 ** attempt) + random.uniform(0, 2)
                     await asyncio.sleep(delay)
                 else:
-                    error_text = response.text()
+                    error_text = await response.text()
                     logger.error(f"HTTP {response.status}: {error_text}")
                     if attempt < RETRY_ATTEMPTS - 1:
                         delay = RETRY_DELAY * (2 ** attempt) + random.uniform(0, 1)

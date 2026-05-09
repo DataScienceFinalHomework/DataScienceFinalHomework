@@ -19,7 +19,6 @@ def setup_logging():
 
 logger = setup_logging()
 
-
 def ReadInAPI():
     """
     Read the api key from the API_FILE
@@ -27,9 +26,10 @@ def ReadInAPI():
         a string: the api key
         None: if the API_FILE does not exit
     """
+    api_key = None
     try:
-        with open("my_dream_data.txt", "r") as f:
-            data = f.read()
+        with open(API_FILE, "r") as f:
+            api_key = f.read()
     except FileNotFoundError:
-        print("错误：找不到该文件，请检查路径是否正确。")
-    # 这里可以编写后续处理逻辑，比如跳过该文件或记录日志
+        logger.error(f"错误：找不到文件{API_FILE}，请检查路径是否正确。")
+    return api_key

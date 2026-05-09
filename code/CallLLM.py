@@ -5,13 +5,14 @@ A useful function wrapped to call LLM api
 The function prototype, parameters and return are here
 
 Prototype:
-    async def call_llm(prompt_system, prompt_user, session, RETRY_DELAY = 2, RETRY_ATTEMPTS = 3, timeout = 20, model_used = "deepseek-ai/DeepSeek-V3"):
+    async def call_llm(prompt_system, prompt_user, session, logger, RETRY_DELAY = 2, RETRY_ATTEMPTS = 3, timeout = 20, model_used = "deepseek-ai/DeepSeek-V3"):
 Parameters:
     prompt_system: a string, the prompt needed to be post to LLM
         example: You are a expert in Data Science
     prompt_user: a string, the prompt needed to be post to LLM
         example: explain what is data science in Chinese
     session: ...
+    logger: ...
     RETRY_DELAY: The time to delay if happens any error, defalut to 2
     RETRY_ATTEMPTS: The max times to delay if happens any error, defalut to 3
     timeout: The longest time to timeout
@@ -26,8 +27,6 @@ ATTENTIONS:
 """
 
 
-import logging
-from datetime import datetime
 import asyncio
 import random
 import os
@@ -37,21 +36,9 @@ import aiohttp
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 API_FILE = os.path.join(SCRIPT_DIR, "my_api_key.txt")
 
-def setup_logging():
-    log_filename = f"Call_llm_file_logging_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
-    logging.basicConfig(
-        level=logging.INFO, # logging level >= INFO (DEBUG, INFO, WARNING, ERROR, CRITICAL)
-        format='%(asctime)s - %(levelname)s - %(message)s',
-        handlers=[
-            logging.FileHandler(log_filename, encoding='utf-8'),  # output log to file
-            logging.StreamHandler() # output log to console
-        ]
-    )
-    return logging.getLogger(__name__)
 
-logger = setup_logging()
 
-def ReadInAPI():
+def ReadInAPI(logger):
     """
     Read the api key from the API_FILE
     Return:
@@ -69,7 +56,7 @@ def ReadInAPI():
     return api_key
 
 
-async def call_llm(prompt_system, prompt_user, session, RETRY_DELAY = 2, RETRY_ATTEMPTS = 3, timeout = 60, model_used = "deepseek-ai/DeepSeek-V3"):
+async def call_llm(prompt_system, prompt_user, session, logger, RETRY_DELAY = 2, RETRY_ATTEMPTS = 3, timeout = 60, model_used = "deepseek-ai/DeepSeek-V3"):
     """
     Call LLM API
     Parameters:
@@ -78,6 +65,7 @@ async def call_llm(prompt_system, prompt_user, session, RETRY_DELAY = 2, RETRY_A
         prompt_user: a string, the prompt needed to be post to LLM
             example: explain what is data science in Chinese
         session: ...
+        logger: ...
         RETRY_DELAY: The time to delay if happens any error, defalut to 2
         RETRY_ATTEMPTS: The max times to delay if happens any error, defalut to 3
         timeout: The longest time to timeout
@@ -94,7 +82,7 @@ async def call_llm(prompt_system, prompt_user, session, RETRY_DELAY = 2, RETRY_A
     prompt_user = prompt_user.strip()
 
 
-    my_api_key = ReadInAPI()
+    my_api_key = ReadInAPI(logger)
     if my_api_key is None:
         logger.error("没有读到api_key")
         return None, 0, 0

@@ -16,3 +16,9 @@ my_api_key.txt
 
 .claude
 .claude*
+
+
+*.log
+__pycache__
+__pycache__/*
+

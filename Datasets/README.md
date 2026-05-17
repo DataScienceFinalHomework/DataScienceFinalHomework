@@ -19,3 +19,7 @@ SDDB_VADER：同DB_VADER
 SDDB_EMPATH：同DB_EMPATH
 
 SDDB_SPACY：同DB_SPACY
+
+### entity_analysis_results
+
+目前课题二已经处理的DB数据集5k条左右数据，包含实体出现的频率(已经降序排列)，以及对rank和freq的log值的简单处理

@@ -14,8 +14,10 @@ my_api_key.txt
 **/.DS_Store
 
 
+.claude/*
 .claude
-.claude*
+
+CLAUDE.md
 
 
 *.log

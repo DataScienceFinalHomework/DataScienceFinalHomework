@@ -13,6 +13,7 @@ code/
 ├── process_data/           # LLM数据处理模块
 │   ├── process_data.ipynb  # 批量处理Notebook
 │   ├── test_process.py     # API测试脚本
+│   ├── topic2_llmed_data_clean.py     # Topic_2测试代码
 │   └── bio_term_explain_LLM.py  # 参考实现
 ├── test_code/              # 测试代码目录
 ├── crawler_get_DreamBank.py    # DreamBank爬虫脚本

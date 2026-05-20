@@ -49,3 +49,5 @@ NLP工具包，输出字段：
 
 - `entity_analysis_results.json`: 实体频率分析结果（已处理约5k条数据）
 - `wrap_dreams.py`: CSV转XML包装工具
+- plot_x_y、plot_logx_logy：课题二出图
+- regression_results.json:课题二回归结果

@@ -7,7 +7,7 @@ from collections import Counter
 import matplotlib.pyplot as plt
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-jsonl_file = os.path.join(SCRIPT_DIR, "../Datasets/DB_LLM_processed.jsonl")
+jsonl_file = os.path.join(SCRIPT_DIR, "../../Datasets/DB_LLM_processed.jsonl")
 
 with open(jsonl_file, "r") as f:
     data = [json.loads(line) for line in f]
@@ -24,7 +24,7 @@ df = pd.DataFrame({
 df["dream_id"] = df["dream_id"].apply(lambda x: x.split("_")[0])
 
 #先保存初步清洗后的数据
-df.to_csv(os.path.join(SCRIPT_DIR, "../Datasets/dream_cha_freq.csv"), index=False)
+df.to_csv(os.path.join(SCRIPT_DIR, "../../Datasets/dream_cha_freq.csv"), index=False)
 
 #合并同series梦境
 merged = {}
@@ -48,7 +48,7 @@ for did, counter in merged.items():
     })
 
 df_sorted = pd.DataFrame(rows)
-out_file = os.path.join(SCRIPT_DIR, "../Datasets/dream_sorted.csv")
+out_file = os.path.join(SCRIPT_DIR, "../../Datasets/dream_sorted.csv")
 df_sorted.to_csv(out_file, index=False)
 
 print(f"排序后数据输出至: {os.path.abspath(out_file)}")
@@ -57,7 +57,7 @@ print(f"排序后数据输出至: {os.path.abspath(out_file)}")
 #以出现频率为 y，出现次数排名为 x，为每个梦境绘制散点图
 #此时发现绘制出散点图显然不符合直线分布
 #存储路径
-plot_dir = os.path.join(SCRIPT_DIR, "../Datasets/plots_x_y")
+plot_dir = os.path.join(SCRIPT_DIR, "../../Datasets/plots_x_y")
 os.makedirs(plot_dir, exist_ok=True)
 
 for _, row in df_sorted.iterrows():
@@ -83,7 +83,7 @@ print(f"原数据散点图已输出至: {os.path.abspath(plot_dir)}")
 #以出现频率和出现次数排名的对数值绘制散点图
 #此时发现绘制出散点图明显更接近于直线分布，说明数据符合幂律分布
 #存储路径
-plot_dir = os.path.join(SCRIPT_DIR, "../Datasets/plots_logx_logy")
+plot_dir = os.path.join(SCRIPT_DIR, "../../Datasets/plots_logx_logy")
 os.makedirs(plot_dir, exist_ok=True)
 
 for _, row in df_sorted.iterrows():
@@ -143,7 +143,7 @@ for _, row in df_sorted.iterrows():
         })
 
 #将线性回归结果保存到 JSON 文件
-regression_json_path = os.path.join(SCRIPT_DIR, "../Datasets/regression_results.json")
+regression_json_path = os.path.join(SCRIPT_DIR, "../../Datasets/regression_results.json")
 with open(regression_json_path, "w", encoding="utf-8") as f:    
     json.dump(regression_results, f, ensure_ascii=False, indent=4)
 print(f"线性回归结果已保存至: {os.path.abspath(regression_json_path)}")

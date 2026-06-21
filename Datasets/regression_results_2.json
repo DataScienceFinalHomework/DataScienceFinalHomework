@@ -1,0 +1,490 @@
+[
+    {
+        "dream_id": "izzy16",
+        "slope": -0.9454824790370546,
+        "intercept": 5.2746666418219705,
+        "correlation": -0.9882649209820362,
+        "r_squared": 0.9766675540436299,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "college-m",
+        "slope": 0.0,
+        "intercept": 0.6931471805599453,
+        "correlation": 0,
+        "r_squared": 0.0,
+        "is_approximately_linear": false
+    },
+    {
+        "dream_id": "hall",
+        "slope": -1.2277791182480522,
+        "intercept": 6.723311024771586,
+        "correlation": -0.9903164099171893,
+        "r_squared": 0.9807265917512707,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "izzy17",
+        "slope": -1.061218377377551,
+        "intercept": 6.735759826314432,
+        "correlation": -0.9909051504751688,
+        "r_squared": 0.9818930172382168,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "dahlia",
+        "slope": -0.35796032175356635,
+        "intercept": 1.677197922573528,
+        "correlation": -0.940444418624366,
+        "r_squared": 0.8844357045217219,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "david",
+        "slope": -0.8098585687725097,
+        "intercept": 4.508320425798956,
+        "correlation": -0.988995540756065,
+        "r_squared": 0.9781121796353819,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "vonuslar.de",
+        "slope": -1.0260533681309023,
+        "intercept": 7.352279404218361,
+        "correlation": -0.9955208996084927,
+        "r_squared": 0.9910618615573046,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "izzy18",
+        "slope": -1.0016860856717003,
+        "intercept": 6.455866848534733,
+        "correlation": -0.9943794396977901,
+        "r_squared": 0.9887904700936909,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "kenneth",
+        "slope": -0.9912615597672726,
+        "intercept": 6.726923366285523,
+        "correlation": -0.9947112069695073,
+        "r_squared": 0.9894503852707339,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "lawrence",
+        "slope": -0.9060534223565216,
+        "intercept": 4.830400131665682,
+        "correlation": -0.989542822460433,
+        "r_squared": 0.9791949974829605,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "mack",
+        "slope": -0.5382556486717132,
+        "intercept": 2.5612482395045033,
+        "correlation": -0.9700216133092967,
+        "r_squared": 0.940941930287171,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "madeline0-childhood",
+        "slope": -0.8272618526754463,
+        "intercept": 2.882098106668506,
+        "correlation": -0.9710439854387488,
+        "r_squared": 0.9429264216567692,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "madeline1-hs",
+        "slope": -0.84590456188773,
+        "intercept": 4.180591566684839,
+        "correlation": -0.9841044665985768,
+        "r_squared": 0.9684616011792694,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "madeline2-dorms",
+        "slope": -0.9622005734604645,
+        "intercept": 4.895629163664365,
+        "correlation": -0.987357353464619,
+        "r_squared": 0.9748745434406566,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "madeline3-offcampus",
+        "slope": -1.0056805327954037,
+        "intercept": 5.416187819691782,
+        "correlation": -0.9889440471568349,
+        "r_squared": 0.9780103284069406,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "madeline4-postgrad",
+        "slope": -1.047444998073235,
+        "intercept": 5.675791860785339,
+        "correlation": -0.9885150590747033,
+        "r_squared": 0.9771620220174637,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "mark",
+        "slope": -0.7865647633657971,
+        "intercept": 3.0193341060077366,
+        "correlation": -0.9742810280082488,
+        "r_squared": 0.9492235215368104,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "melissa",
+        "slope": -0.808177343051676,
+        "intercept": 4.0056531831088344,
+        "correlation": -0.9866105025318427,
+        "r_squared": 0.9734002837061353,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "melora",
+        "slope": -1.074247335866728,
+        "intercept": 5.680589527842073,
+        "correlation": -0.9873146188108353,
+        "r_squared": 0.974790156517585,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "melvin",
+        "slope": -0.8403207021617628,
+        "intercept": 4.751719576079008,
+        "correlation": -0.9883670251086881,
+        "r_squared": 0.9768693763221985,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "dorothea",
+        "slope": -1.1002488897061797,
+        "intercept": 6.264320859629592,
+        "correlation": -0.988112164170758,
+        "r_squared": 0.9763656489822186,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "merri",
+        "slope": -0.9956243914549137,
+        "intercept": 5.734033184606791,
+        "correlation": -0.9898755177344272,
+        "r_squared": 0.9798535406100002,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "miami-home",
+        "slope": -0.8445346983378115,
+        "intercept": 4.5305928677538825,
+        "correlation": -0.9906883808303345,
+        "r_squared": 0.9814634679122298,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "miami-lab",
+        "slope": -0.8767661354777112,
+        "intercept": 5.127207827676076,
+        "correlation": -0.9920358127909601,
+        "r_squared": 0.9841350538598205,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "midwest",
+        "slope": -0.9930972730473943,
+        "intercept": 4.844929971807108,
+        "correlation": -0.9875289380362592,
+        "r_squared": 0.9752134034590212,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "ed",
+        "slope": -1.3269484150344732,
+        "intercept": 5.1177521221858004,
+        "correlation": -0.9620931800924698,
+        "r_squared": 0.9256232871804414,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "nancy",
+        "slope": -0.6095366254592177,
+        "intercept": 2.782066103450138,
+        "correlation": -0.9779200217595866,
+        "r_squared": 0.9563275689582706,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "natural",
+        "slope": -0.7718351887822394,
+        "intercept": 4.259805231719067,
+        "correlation": -0.9891504191943028,
+        "r_squared": 0.9784185517922654,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "edna",
+        "slope": -0.8053777545837472,
+        "intercept": 2.6815211526870644,
+        "correlation": -0.983802144634145,
+        "r_squared": 0.9678666597867435,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "elizabeth",
+        "slope": -1.0238863520628032,
+        "intercept": 7.370347955544793,
+        "correlation": -0.9944233123643599,
+        "r_squared": 0.9888777241737052,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "norman",
+        "slope": -1.2536394373588218,
+        "intercept": 6.260978351778265,
+        "correlation": -0.9735854650424528,
+        "r_squared": 0.9478686577419287,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "pegasus",
+        "slope": -1.0028246745422242,
+        "intercept": 6.5272471397624345,
+        "correlation": -0.993101722563362,
+        "r_squared": 0.986251031358318,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "emmas",
+        "slope": -0.7205621087172233,
+        "intercept": 3.355379252208884,
+        "correlation": -0.9753465571935889,
+        "r_squared": 0.9513009066293863,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "emma",
+        "slope": -1.1365222969829012,
+        "intercept": 6.863288727012283,
+        "correlation": -0.9900884253417825,
+        "r_squared": 0.9802750899957707,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "peru-m",
+        "slope": -1.148426637517369,
+        "intercept": 5.731299143068868,
+        "correlation": -0.9864202733381479,
+        "r_squared": 0.9730249556525064,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "peru-f",
+        "slope": -1.147382178314094,
+        "intercept": 6.195692135152414,
+        "correlation": -0.9884115068718893,
+        "r_squared": 0.9769573069167591,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "esther",
+        "slope": -0.9421426960232725,
+        "intercept": 4.538679186877967,
+        "correlation": -0.974435894338893,
+        "r_squared": 0.9495253121760385,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "german-f.de",
+        "slope": -1.046414971146766,
+        "intercept": 5.627283017716337,
+        "correlation": -0.9874270665676032,
+        "r_squared": 0.9750122117903017,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "phil1",
+        "slope": -0.6511213768887785,
+        "intercept": 3.383366133224805,
+        "correlation": -0.9783415499026691,
+        "r_squared": 0.957152188265957,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "phil2",
+        "slope": -0.8305578042312011,
+        "intercept": 4.511580206272545,
+        "correlation": -0.9847281093662796,
+        "r_squared": 0.9696894493760875,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "german-m.de",
+        "slope": -0.8223783764775076,
+        "intercept": 4.010613430469398,
+        "correlation": -0.9832301576917881,
+        "r_squared": 0.9667415429946185,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "phil3",
+        "slope": -0.6953153438166311,
+        "intercept": 3.574118651397475,
+        "correlation": -0.9666085641996901,
+        "r_squared": 0.9343321163841865,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "norms-f",
+        "slope": -1.1691379048317925,
+        "intercept": 6.320256332181205,
+        "correlation": -0.9870039821625877,
+        "r_squared": 0.9741768608048054,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "physiologist",
+        "slope": -0.7312005770596314,
+        "intercept": 3.2324103422372867,
+        "correlation": -0.9767563126472811,
+        "r_squared": 0.9540528942963132,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "ringo",
+        "slope": -0.5852117649505097,
+        "intercept": 2.1788073084035466,
+        "correlation": -0.925609342095908,
+        "r_squared": 0.8567526541752196,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "bosnak",
+        "slope": -0.7354956621508069,
+        "intercept": 3.4362206012954886,
+        "correlation": -0.984441052341999,
+        "r_squared": 0.9691241855362228,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "sally",
+        "slope": -0.9422939363925606,
+        "intercept": 5.376435442825191,
+        "correlation": -0.9857907130757492,
+        "r_squared": 0.9717833299863937,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "norms-m",
+        "slope": -0.9840709136826341,
+        "intercept": 5.585427530092713,
+        "correlation": -0.9928244031080364,
+        "r_squared": 0.9857002954068288,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "samantha",
+        "slope": -0.7910626406684541,
+        "intercept": 3.879880253967478,
+        "correlation": -0.977298834859576,
+        "r_squared": 0.9551130126178854,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "seventh",
+        "slope": -0.7652956260039174,
+        "intercept": 3.6685483787162383,
+        "correlation": -0.9580439360524508,
+        "r_squared": 0.9178481834068718,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "zurich-f.de",
+        "slope": -0.8748169100831458,
+        "intercept": 4.606170144421118,
+        "correlation": -0.9807732193100083,
+        "r_squared": 0.9619161077157172,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "zurich-m.de",
+        "slope": -0.7577916555516466,
+        "intercept": 3.882489889787414,
+        "correlation": -0.982412470500681,
+        "r_squared": 0.9651342621952512,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "toby",
+        "slope": -0.8429064715334116,
+        "intercept": 3.18028405441397,
+        "correlation": -0.9677732837592604,
+        "r_squared": 0.9365851287581821,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "hazel",
+        "slope": -0.8915462366261242,
+        "intercept": 4.238715905735353,
+        "correlation": -0.9676856928722325,
+        "r_squared": 0.9364156001896132,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "tom",
+        "slope": -0.844866815964388,
+        "intercept": 3.1878655046585793,
+        "correlation": -0.9812300343545898,
+        "r_squared": 0.9628123803195098,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "ucsc",
+        "slope": -0.801499864450155,
+        "intercept": 3.816475533132323,
+        "correlation": -0.9894159421417259,
+        "r_squared": 0.9789439065641992,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "van",
+        "slope": -0.48055653373649093,
+        "intercept": 1.8971095474711253,
+        "correlation": -0.9528057437857896,
+        "r_squared": 0.907838785391192,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "izzy",
+        "slope": -0.9827918821790694,
+        "intercept": 7.1783195110136,
+        "correlation": -0.9942888582742311,
+        "r_squared": 0.9886103336882739,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "izzy-all",
+        "slope": -1.0577958877655576,
+        "intercept": 8.071587505837064,
+        "correlation": -0.9958039002167228,
+        "r_squared": 0.9916254076868348,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "arlie",
+        "slope": -0.5861414403795996,
+        "intercept": 2.6002469218085995,
+        "correlation": -0.9653643883216376,
+        "r_squared": 0.9319284022396102,
+        "is_approximately_linear": true
+    },
+    {
+        "dream_id": "b",
+        "slope": -1.0983443233355352,
+        "intercept": 7.813619231849773,
+        "correlation": -0.9939103980878957,
+        "r_squared": 0.9878578794272377,
+        "is_approximately_linear": true
+    }
+]
